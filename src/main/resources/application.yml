@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/payment}
+    username: ${DATABASE_USERNAME:payment}
+    password: ${DATABASE_PASSWORD:payment}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+
+treasury:
+  api-base-url: ${TREASURY_API_BASE_URL:https://api.fiscaldata.treasury.gov}
+
+server:
+  error:
+    include-message: never
